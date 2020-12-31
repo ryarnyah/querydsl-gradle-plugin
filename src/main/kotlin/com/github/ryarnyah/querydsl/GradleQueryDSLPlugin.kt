@@ -36,7 +36,7 @@ class GradleQueryDSLPlugin : Plugin<Project> {
                 jpaExporterTask.targetFolder,
                 genericExporterTask.targetFolder
             )
-            val sourceSets: SourceSetContainer = project.convention.getByType(SourceSetContainer::class.java)
+            val sourceSets: SourceSetContainer = project.extensions.getByType(SourceSetContainer::class.java)
             val main = sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)
             main.java.srcDirs(generatedSources)
         }

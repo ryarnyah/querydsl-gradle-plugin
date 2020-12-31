@@ -6,7 +6,7 @@ Port of [QueryDSL](https://github.com/querydsl/querydsl) Maven plugin for Gradle
 ```kotlin
 plugins {
     //...
-    id("com.github.ryarnyah.querydsl") version "0.0.1"
+    id("com.github.ryarnyah.querydsl") version "0.0.2"
 }
 
 tasks {
