@@ -128,6 +128,8 @@ abstract class AbstractExporterTask: DefaultTask() {
         } else {
             sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)
         }
-        return URLClassLoader(sourceSet.runtimeClasspath.map { it.toURI().toURL() }.toTypedArray())
+        return URLClassLoader(sourceSet.runtimeClasspath.map { it.toURI().toURL() }.toTypedArray(),
+            AbstractExporterTask::class.java.classLoader
+        )
     }
 }
